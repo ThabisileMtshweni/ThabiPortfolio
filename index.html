@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-section">
+                <i class="circle-user"></i>
+                <h1>Thabisile Ulender Mtshweni</h1>
+            </div>
+    
+            <nav class="navbar" id="navbar">
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#experience">My Journey</a>
+                <a href="#contact">Contact</a>
+            </nav>
+    
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Full-stack Developer | Problem Solver | Innovator</strong></p>
+                    <p>Hello! I’m Thabisile Ulender Mtshweni, a passionate software developer with a Diploma in ICT in Application Development from Walter Sisulu University. I specialize in full-stack development, using a wide array of technologies to build scalable, efficient, and user-friendly applications.</p>
+                    <p>With experience in languages such as <strong>Java, Python, C#, SQL, JavaScript, Node.js, React, and HTML/CSS</strong>, I thrive on transforming ideas into functional solutions. I am committed to continuous learning and staying ahead of the curve with the latest development trends and frameworks.</p>
+                    <p>Whether it's developing robust backend systems, creating seamless frontend interfaces, or solving complex technical challenges, my goal is always to deliver quality solutions that exceed expectations. Let's build something amazing together!</p>
+                </div>
+                <div class="about-image">
+                    <img src="photo.jpg" alt="Thabisile Mtshweni" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="Java-Programming-Concepts-Featured.avif" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="Python.jfif" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="csharp.jpg" alt="C#">
+                    <p>C#</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="sql.jpg" alt="SQL">
+                    <p>SQL</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="Javascript-best-practices-1.webp" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="nodejs.jpg" alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="react-logo-png.png" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="html n css.webp" alt="HTML/CSS">
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="skill" onclick="toggleHover(this)">
+                    <img src="APEXWhite.png" alt="Apex Oracle">
+                    <p>Apex Oracle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-wrapper">
+            <div class="project-card">
+                <h3>Chat App in React</h3>
+                <p>This project is a collaborative effort where we used React to build a chat application. It allows users to communicate efficiently and securely, with real-time messaging functionality and a user-friendly interface. The application also integrates backend services to manage user data and message history.</p>
+                <a href="https://famous-concha-16fc3d.netlify.app " target="_blank" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Booking App for Beauty Professionals</h3>
+                <p>This project is a web application built for beauty professionals to securely manage client bookings. Using HTML, CSS, and JavaScript, the application provides an intuitive interface for users to schedule appointments, view client details, and manage their services effectively.</p>
+                <a href="https://bright-unicorn-093b4e.netlify.app/" target="_blank" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Event Planner in Python</h3>
+                <p>This project is an event planner application developed using Python. It allows users to create, manage, and organize events efficiently. It includes features like registration, login, event creation, and Firebase integration for authentication and data storage.</p>
+                <a href="https://github.com/yourgithub/project3" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="view-more-wrapper">
+            <a href="https://github.com/ThabisileMtshweni" class="view-more-button" target="_blank" rel="noopener noreferrer">
+                View More Projects on GitHub →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Certificates Section -->
+<section id="certificates">
+    <h2>Certificates</h2>
+    <div class="container">
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="node.js_backend.png" alt="Node.js Certificate">
+        </div>
+        <h3>Certificate in Node.js</h3>
+        <p>Issued by: Coursera</p>
+        <a href="https://coursera.org/share/ef53531829ecde5b5aa4e91f29d5ee9b" target="_blank" class="certificate-link">View Certificate</a>
+      </div>
+  
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="react_.png" alt="React Certificate">
+        </div>
+        <h3>Certificate in React</h3>
+        <p>Issued by: Coursera</p>
+        <a href="https://coursera.org/share/bfd8779d7f53a60961eb0bdab96f1831" target="_blank" class="certificate-link">View Certificate</a>
+      </div>
+  
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="Python_.png" alt="Python Certificate">
+        </div>
+        <h3>Certificate in Python</h3>
+        <p>Issued by: Coursera</p>
+        <a href="https://coursera.org/share/ef53531829ecde5b5aa4e91f29d5ee9b" target="_blank" class="certificate-link">View Certificate</a>
+      </div>
+    </div>
+  
+    <div class="view-more-wrapper">
+      <a href="https://github.com/ThabisileMtshweni/Certificates" class="view-more-button" target="_blank" rel="noopener noreferrer">
+        View More on GitHub →
+      </a>
+    </div>
+  </section>
+  
+
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Software Development Associate</h3>
+                        <p><strong>Capaciti</strong><br>Actively learning and applying software development skills by working on real-world projects as part of the Capaciti training program.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Diploma in ICT: Application Development</h3>
+                        <p><strong>Walter Sisulu University</strong><br>Focused on programming, software design, and full-stack application development using a wide range of technologies including Java, Python, SQL, JavaScript, React, Node.js, HTML, and CSS. Experienced in building both frontend and backend systems, with an emphasis on creating responsive, secure, and user-friendly applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+     <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="mailto:thabisileulender@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <label for="subject">Email Subject</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="social-links">
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
+                    <p>Connect with me on:</p>
+                    <button class="social-btn linkedin-btn" type="button" onclick="window.open('https://www.linkedin.com/in/thabisile-mtshweni-41202526b/', '_blank')">
+                        <img src="linkedIn_PNG8.png" alt="LinkedIn" class="social-icon">
+                        LinkedIn
+                    </button>
+                    <button class="social-btn github-btn" type="button" onclick="window.open('https://github.com/ThabisileMtshweni', '_blank')">
+                        <img src="github-icon.png" alt="GitHub" class="social-icon">
+                        GitHub
+                    </button>
+
+                </div>
+        </div>
+    </section>
+
+    
+                    <a href="Thabisile_Mtshweni_CV.pdf" download class="download-cv-btn">
+                  <i class="fas fa-download"></i> Download CV
+                  </a>
+
+    <footer>
+        <p>&copy; 2025 Thabisile Ulender Mtshweni. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const burger = document.getElementById("burger");
+  const navbar = document.getElementById("navbar");
+
+  burger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+    </script>
+</body>
+</html>
