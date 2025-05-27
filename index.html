@@ -52,50 +52,74 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="Java-Programming-Concepts-Featured.avif" alt="Java">
-                    <p>Java</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="Python.jfif" alt="Python">
-                    <p>Python</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="csharp.jpg" alt="C#">
-                    <p>C#</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="sql.jpg" alt="SQL">
-                    <p>SQL</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="Javascript-best-practices-1.webp" alt="JavaScript">
-                    <p>JavaScript</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="nodejs.jpg" alt="Node.js">
-                    <p>Node.js</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="react-logo-png.png" alt="React">
-                    <p>React</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="html n css.webp" alt="HTML/CSS">
-                    <p>HTML/CSS</p>
-                </div>
-                <div class="skill" onclick="toggleHover(this)">
-                    <img src="APEXWhite.png" alt="Apex Oracle">
-                    <p>Apex Oracle</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   <!-- Skills Section -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <a href="https://www.w3schools.com/java/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="Java-Programming-Concepts-Featured.avif" alt="Java">
+          <p>Java</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/python/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="Python.jfif" alt="Python">
+          <p>Python</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/cs/index.php" target="_blank" rel="noopener noreferrer">
+          <img src="csharp.jpg" alt="C#">
+          <p>C#</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="sql.jpg" alt="SQL">
+          <p>SQL</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="Javascript-best-practices-1.webp" alt="JavaScript">
+          <p>JavaScript</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/nodejs/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="nodejs.jpg" alt="Node.js">
+          <p>Node.js</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/react/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="react-logo-png.png" alt="React">
+          <p>React</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener noreferrer">
+          <img src="html n css.webp" alt="HTML/CSS">
+          <p>HTML/CSS</p>
+        </a>
+      </div>
+      <div class="skill">
+        <a href="https://www.geeksforgeeks.org/introduction-to-oracle-apex/" target="_blank" rel="noopener noreferrer">
+          <img src="APEXWhite.png" alt="Apex Oracle">
+          <p>Apex Oracle</p>
+        </a>
+      </div>
+       <div class="skill">
+        <a href="https://www.w3schools.com/python/python_ml_getting_started.asp" target="_blank" rel="noopener noreferrer">
+          <img src="what-is-machine-learning.jpg" alt="Machine Learning">
+          <p>Machine Learning</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Projects Section -->
 <section id="projects">
@@ -225,7 +249,7 @@
     </section>
 
     
-                    <a href="Thabisile_Mtshweni_CV.pdf" download class="download-cv-btn">
+                    <a href="ThabisileUlenderMtshweniCV.pdf" download class="download-cv-btn">
                   <i class="fas fa-download"></i> Download CV
                   </a>
 
@@ -234,14 +258,23 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        const burger = document.getElementById("burger");
+   <script>
+  AOS.init();
+
+  const burger = document.getElementById("burger");
   const navbar = document.getElementById("navbar");
 
   burger.addEventListener("click", () => {
     navbar.classList.toggle("active");
   });
-    </script>
+
+  function toggleHover(el) {
+    // If the click was on a link (or inside one), don’t toggle hover
+    if (!event.target.closest("a")) {
+      el.classList.toggle("hover");
+    }
+  }
+</script>
+
 </body>
 </html>
