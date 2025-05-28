@@ -121,35 +121,42 @@
   </div>
 </section>
 
-    <!-- Projects Section -->
+ <!-- Projects Section -->
 <section id="projects">
     <div class="container">
         <h2>Projects</h2>
         <div class="projects-wrapper">
             <div class="project-card">
+                <img src="SwiftDesk screenshort.png" alt="Chat App Screenshot" class="project-thumbnail" onclick="openLightbox(this)" data-full="SwiftDesk screenshort.png">
                 <h3>Chat App in React</h3>
                 <p>This project is a collaborative effort where we used React to build a chat application. It allows users to communicate efficiently and securely, with real-time messaging functionality and a user-friendly interface. The application also integrates backend services to manage user data and message history.</p>
-                <a href="https://famous-concha-16fc3d.netlify.app " target="_blank" class="project-link">View Project</a>
+                <a href="https://famous-concha-16fc3d.netlify.app" target="_blank" class="project-link">View Project</a>
             </div>
             <div class="project-card">
+                <img src="GlamHive@Screenshort.png" alt="Booking App Screenshot" class="project-thumbnail" onclick="openLightbox(this)" data-full="GlamHive@Screenshort.png">
                 <h3>Booking App for Beauty Professionals</h3>
                 <p>This project is a web application built for beauty professionals to securely manage client bookings. Using HTML, CSS, and JavaScript, the application provides an intuitive interface for users to schedule appointments, view client details, and manage their services effectively.</p>
                 <a href="https://bright-unicorn-093b4e.netlify.app/" target="_blank" class="project-link">View Project</a>
             </div>
             <div class="project-card">
+                <img src="dashboard.png" alt="Event Planner Screenshot" class="project-thumbnail" onclick="openLightbox(this)" data-full="dashboard.png">
                 <h3>Event Planner in Python</h3>
                 <p>This project is an event planner application developed using Python. It allows users to create, manage, and organize events efficiently. It includes features like registration, login, event creation, and Firebase integration for authentication and data storage.</p>
                 <a href="https://github.com/yourgithub/project3" target="_blank" class="project-link">View Project</a>
             </div>
         </div>
         <div class="view-more-wrapper">
-            <a href="https://github.com/ThabisileMtshweni" class="view-more-button" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/ThabisileMtshweni?tab=repositories" class="view-more-button" target="_blank" rel="noopener noreferrer">
                 View More Projects on GitHub →
             </a>
         </div>
     </div>
 </section>
 
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full-size preview">
+</div>
 
 
 <!-- Certificates Section -->
@@ -274,6 +281,14 @@
       el.classList.toggle("hover");
     }
   }
+  function openLightbox(img) {
+    const fullImgSrc = img.getAttribute('data-full');
+    document.getElementById('lightbox-img').src = fullImgSrc;
+    document.getElementById('lightbox-modal').style.display = 'flex';
+}
+function closeLightbox() {
+    document.getElementById('lightbox-modal').style.display = 'none';
+}
 </script>
 
 </body>
