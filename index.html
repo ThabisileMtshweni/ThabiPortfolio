@@ -39,12 +39,18 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p><strong>Full-stack Developer | Problem Solver | Innovator</strong></p>
-                    <p>Hello! I’m Thabisile Ulender Mtshweni, a passionate software developer with a Diploma in ICT in Application Development from Walter Sisulu University. I specialize in full-stack development, using a wide array of technologies to build scalable, efficient, and user-friendly applications.</p>
-                    <p>With experience in languages such as <strong>Java, Python, C#, SQL, JavaScript, Node.js, React, and HTML/CSS</strong>, I thrive on transforming ideas into functional solutions. I am committed to continuous learning and staying ahead of the curve with the latest development trends and frameworks.</p>
-                    <p>Whether it's developing robust backend systems, creating seamless frontend interfaces, or solving complex technical challenges, my goal is always to deliver quality solutions that exceed expectations. Let's build something amazing together!</p>
-                </div>
+              <div class="about-text">
+  <p><strong id="typing-title"></strong></p>
+  <p>Hi, I’m <strong id="typing-name"></strong> </p>
+  <p></p> a passionate and detail-oriented software developer dedicated to creating innovative, user-driven web and software solutions. I hold a <strong>Diploma in ICT: Application Development</strong> from Walter Sisulu University and have practical experience across both frontend and backend development.</p>
+  
+  <p>My technical toolkit includes <strong>Java, Python, C#, PHP, SQL, JavaScript, Node.js, Express.js, React, HTML/CSS, WordPress</strong>, along with a growing expertise in <strong>APIs, Artificial Intelligence (AI), and Machine Learning (ML)</strong>. I enjoy building scalable systems, integrating APIs, and experimenting with emerging technologies to solve real-world challenges.</p>
+  
+  <p>I’m currently focused on enhancing my full-stack development and AI driven application skills, crafting solutions that are fast, responsive, secure, and intelligent. I’m driven by curiosity, collaboration, and the goal of turning ideas into impactful digital products.</p>
+  
+  <p>Let’s connect and build something exceptional together!</p>
+</div>
+
                 <div class="about-image">
                     <img src="Thabisile.jpg" alt="Thabisile Mtshweni" class="about-image">
                 </div>
@@ -199,29 +205,40 @@
   </section>
   
 
-
     <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2>My Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Software Development Associate</h3>
-                        <p><strong>Capaciti</strong><br>Actively learning and applying software development skills by working on real-world projects as part of the Capaciti training program.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Diploma in ICT: Application Development</h3>
-                        <p><strong>Walter Sisulu University</strong><br>Focused on programming, software design, and full-stack application development using a wide range of technologies including Java, Python, SQL, JavaScript, React, Node.js, HTML, and CSS. Experienced in building both frontend and backend systems, with an emphasis on creating responsive, secure, and user-friendly applications.</p>
-                    </div>
+<section id="experience">
+    <div class="container">
+        <h2>My Journey</h2>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-date"> 01 August 2025 - Present</div>
+                <div class="timeline-content">
+                    <h3>Web Developer Intern</h3>
+                    <p><strong>YourDigitalSA</strong><br>Contributed to the development and optimization of property and business websites. Responsible for creating, maintaining, and improving WordPress-based sites, implementing SEO strategies, and enhancing user experience through responsive design and performance optimization. Utilized HTML, CSS, JavaScript, and chatbot integrations to improve interactivity and customer engagement. Collaborated with senior developers to design and deploy new web features and client-focused digital solutions.</p>
                 </div>
             </div>
+
+             <div class="timeline-item">
+                <div class="timeline-date">30 December 2024 - 31 July 2025</div>
+                <div class="timeline-content">
+                    <h3>Software Development Associate</h3>
+                    <p><strong>Capaciti</strong><br>Completed the CapaCiTi training program, where I actively learned and applied software development skills by building real-world projects using Python, React.js, Node.js, Flutter, Java, and APIs, while also integrating AI-driven solutions to enhance functionality and user experience.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2021 - 2024</div>
+                <div class="timeline-content">
+                    <h3>Diploma in ICT: Application Development</h3>
+                    <p><strong>Walter Sisulu University</strong><br>Focused on programming, software design, and full-stack application development using a wide range of technologies including Java, Python, SQL, JavaScript, React, Node.js, HTML, and CSS. Experienced in building both frontend and backend systems, with an emphasis on creating responsive, secure, and user-friendly applications.</p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
      <!-- Contact Section -->
      <section id="contact">
@@ -266,8 +283,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
    <script>
+  // Initialize AOS animations (scroll effects)
   AOS.init();
 
+  // Burger menu toggle
   const burger = document.getElementById("burger");
   const navbar = document.getElementById("navbar");
 
@@ -275,21 +294,60 @@
     navbar.classList.toggle("active");
   });
 
+  // Toggle hover effect
   function toggleHover(el) {
-    // If the click was on a link (or inside one), don’t toggle hover
+    // Prevent toggle when clicking on a link
     if (!event.target.closest("a")) {
       el.classList.toggle("hover");
     }
   }
+
+  // Lightbox functionality
   function openLightbox(img) {
     const fullImgSrc = img.getAttribute('data-full');
     document.getElementById('lightbox-img').src = fullImgSrc;
     document.getElementById('lightbox-modal').style.display = 'flex';
-}
-function closeLightbox() {
+  }
+
+  function closeLightbox() {
     document.getElementById('lightbox-modal').style.display = 'none';
-}
+  }
+
+  // ------------------------------
+  // ✨ Typewriter Effect Section ✨
+  // ------------------------------
+
+  const titleText = "Full-Stack Developer | Problem Solver | Innovator";
+  const nameText = "Thabisile Ulender Mtshweni";
+
+  const titleEl = document.getElementById("typing-title");
+  const nameEl = document.getElementById("typing-name");
+
+  let titleIndex = 0;
+  let nameIndex = 0;
+
+  function typeWriterTitle() {
+    if (titleIndex < titleText.length) {
+      titleEl.innerHTML += titleText.charAt(titleIndex);
+      titleIndex++;
+      setTimeout(typeWriterTitle, 50); // Adjust typing speed here
+    } else {
+      setTimeout(typeWriterName, 500); // Delay before typing name
+    }
+  }
+
+  function typeWriterName() {
+    if (nameIndex < nameText.length) {
+      nameEl.innerHTML += nameText.charAt(nameIndex);
+      nameIndex++;
+      setTimeout(typeWriterName, 70); // Adjust typing speed for name
+    }
+  }
+
+  // Start animation when the page finishes loading
+  window.addEventListener("load", typeWriterTitle);
 </script>
+
 
 </body>
 </html>
